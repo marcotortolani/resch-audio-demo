@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 import { Button } from "@/components/ui/button";
-import Video from "../components/Video";
+//import Video from "../components/Video";
 
 import heroImage from "../../public/img/resch-valvular.jpeg";
 //import video from "../../public/video/pexels_parlante-720p.mp4";
