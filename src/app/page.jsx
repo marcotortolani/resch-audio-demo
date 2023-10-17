@@ -8,7 +8,7 @@ import heroImage from "../../public/img/resch-valvular.jpeg";
 
 export default function Home() {
   return (
-    <main className=" w-full min-h-screen overflow-hidden flex flex-col items-center justify-between bg-background">
+    <main className=" w-full min-h-[100svh] overflow-hidden flex flex-col items-center justify-between bg-background">
       <section className=" w-full h-screen min-h-fit pt-16 flex flex-col justify-around ">
         <div className=" z-20 sticky top-10 w-full h-fit my-6 mb-4 flex flex-col items-center justify-around ">
           <div className=" w-fit px-4  bg-gradient-to-r from-sky-800 to-purple-800 bg-clip-text text-transparent">
