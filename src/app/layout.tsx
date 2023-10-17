@@ -26,7 +26,7 @@ export default function RootLayout({
         disableTransitionOnChange
       >
         <body
-          className={font.className + " w-screen flex flex-col items-center"}
+          className={font.className + " w-screen h-fit overflow-hidden overflow-y-scroll flex flex-col items-center"}
         >
           <Header />
           {children}
