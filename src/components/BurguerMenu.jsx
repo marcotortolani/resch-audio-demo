@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
-import SocialNetFooter from "@/components/SocialNetFooter";
+import { Button } from "../components/ui/button";
+import SocialNetFooter from "../components/SocialNetFooter";
 import {
   Sheet,
   SheetClose,
