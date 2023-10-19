@@ -19,7 +19,7 @@ export default function HomeSection() {
             Audio High-End
           </h2>
         </div>
-        <p className=" z-30 lg:bottom-4 w-4/6 h-fit  py-2 max-w-lg text-white text-center leading-4 cursor-default select-none">
+        <p className=" z-30 lg:bottom-4 w-4/6 h-fit  py-2 max-w-lg font-light text-white text-center leading-4 cursor-default select-none">
           Equipamiento de audio artesanal y de alta calidad
         </p>
       </div>

@@ -9,21 +9,21 @@ export default function SocialNetFooter() {
       <Link
         href="https://www.instagram.com/resch.audio/"
         target="_blank"
-        className=" p-1 hover:bg-gradient-to-b from-blue-300 to-pink-500 cursor-pointer rounded-lg"
+        className=" group p-1 hover:bg-gradient-to-b from-blue-500 to-pink-500 cursor-pointer rounded-lg"
       >
         <Instagram className=" text-foreground group-hover:text-background" />
       </Link>
       <Link
         href="https://www.facebook.com/resch.audio"
         target="_blank"
-        className=" p-1 hover:bg-gradient-to-b from-blue-400 to-blue-600 cursor-pointer rounded-lg"
+        className=" group p-1 hover:bg-gradient-to-b from-blue-400 to-blue-600 cursor-pointer rounded-lg"
       >
         <Facebook className=" text-foreground group-hover:text-background"/>
       </Link>
       <Link
         href="https://www.youtube.com/@reschaudio"
         target="_blank"
-        className=" p-1 hover:bg-gradient-to-b from-red-400 to-red-600 cursor-pointer rounded-lg"
+        className=" group p-1 hover:bg-gradient-to-b from-red-400 to-red-600 cursor-pointer rounded-lg"
       >
         <Youtube className=" text-foreground group-hover:text-background"/>
       </Link>
