@@ -1,48 +1,45 @@
 import Image from "next/image";
-
-import { Button } from "@/components/ui/button";
-//import Video from "../components/Video";
-
-import heroImage from "../../public/img/resch-valvular.jpeg";
-//import video from "../../public/video/pexels_parlante-720p.mp4";
+import HomeSection from "../components/HomeSection";
 
 export default function Home() {
   return (
-    <main className=" w-full min-h-[100svh] overflow-hidden flex flex-col items-center justify-between bg-background">
-      <section className=" w-full h-screen min-h-fit pt-16 flex flex-col justify-around ">
-        <div className=" z-20 sticky top-10 w-full h-fit my-6 mb-4 flex flex-col items-center justify-around ">
-          <div className=" w-fit px-4  bg-gradient-to-r from-sky-800 to-purple-800 bg-clip-text text-transparent">
-            <h2 className=" text-center font-black text-4xl md:text-6xl lg:text-8xl uppercase ">Audio High-End</h2>
+    <main className=" w-screen min-h-[100svh] overflow-hidden flex flex-col items-center justify-between bg-background">
+      <HomeSection />
+
+      <section id="#images" className=" w-full h-screen min-h-fit bg-sky-700">
+        <h3>Grilla de imagenes</h3>
+
+        <div className=" w-full h-2/3 grid grid-cols-2 grid-rows-2 bg-gray-300">
+          <div className=" w-full h-full col-span-1 row-span-1 bg-red-200 ">
+            Imagen 01
           </div>
-          
+          <div className=" w-full h-full col-span-1 row-span-1 bg-blue-200 ">
+            Imagen 02
+          </div>
+          <div className=" w-full h-full col-span-1 row-span-1 bg-green-200 ">
+            Imagen 03
+          </div>
+          <div className=" w-full h-full col-span-1 row-span-1 bg-purple-200 ">
+            Imagen 04
+          </div>
         </div>
-        <div className=" z-10 relative w-full h-full md:h-4/5 lg:h-1/2 flex flex-col items-center ">
-          <Image
-            className=" w-full object-cover"
-            src={heroImage}
-            alt="Resch Audio RA-SET-1"
-            // width={500}
-            // height={374}
-            fill
-            // layout="responsive"
-          />
-          <div className=" z-20 absolute top-0 w-full h-full flex items-center">
-            <div className=" w-full h-full bg-black opacity-80  " />
-            {/* <div className=" w-1/2 h-full  bg-gradient-to-r from-transparent to-black bg-opacity-50" /> */}
-          </div>
-          <p className=" z-30 absolute bottom-36 lg:bottom-4 w-4/6 max-w-lg text-white text-center ">
-            Equipamiento de audio artesanal y de alta calidad
+      </section>
+
+      <section id="#about-us" className=" w-full h-screen min-h-fit bg-green-700">
+        <h3>Resumen Nosotros</h3>
+
+        <div className=" w-full h-full">
+          <div className=" w-1/2 h-2/3">Foto hermanos Resch trabajando</div>
+          <p>
+            Duis nisi enim sint proident dolore magna eiusmod qui duis pariatur
+            in exercitation. Velit velit in deserunt incididunt et ullamco minim
+            sunt elit occaecat commodo eu duis. Non esse non consectetur et sint
+            elit cillum.
           </p>
         </div>
-
-        {/* <div className=" w-full my-2  text-center font-normal text-lg bg-gradient-to-r from-sky-500 to-white bg-clip-text text-transparent">
-          Made in Argentina
-        </div> */}
       </section>
 
-      <section className=" w-full h-screen min-h-fit bg-gray-500">
-        Seccion 2
-      </section>
+      <footer className="  w-full h-1/4 bg-background"></footer>
     </main>
   );
 }

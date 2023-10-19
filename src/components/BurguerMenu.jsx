@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import SocialNetFooter from "@/components/SocialNetFooter";
 import {
   Sheet,
   SheetClose,
@@ -11,7 +12,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 
-import { AlignJustify, Instagram, Facebook, Youtube } from "lucide-react";
+import { AlignJustify } from "lucide-react";
 
 export default function SheetDemo() {
   return (
@@ -24,26 +25,40 @@ export default function SheetDemo() {
       <SheetContent>
         <SheetHeader>
           <SheetTitle>
-            <h1 className=" font-light">Resch Audio</h1>
+            <span className=" font-light text-md">Resch Audio</span>
           </SheetTitle>
           <SheetDescription>
-            Diseño y fabricación de audio High-End Argentina.
+            <span className=" font-extralight text-xs">
+              Diseño y fabricación de audio High-End Argentina.
+            </span>
           </SheetDescription>
         </SheetHeader>
 
-        <div className="grid gap-4 py-4"></div>
+        <div className="grid gap-2 py-10">
+          <Link
+            href="/works"
+            target="_self"
+            className=" p-2 pl-0 hover:pl-2 hover:bg-gradient-to-r from-foreground to-transparent hover:text-background rounded-lg"
+          >
+            Nuestro trabajo
+          </Link>
+          <Link
+            href="/about"
+            target="_self"
+            className=" p-2 pl-0 hover:pl-2 hover:bg-gradient-to-r from-foreground to-transparent hover:text-background rounded-lg"
+          >
+            Nosotros
+          </Link>
+          <Link
+            href="/contact"
+            target="_self"
+            className=" p-2 pl-0 hover:pl-2 hover:bg-gradient-to-r from-foreground to-transparent hover:text-background rounded-lg"
+          >
+            Contacto
+          </Link>
+        </div>
         <SheetFooter className=" w-full h-fit">
-          <div className=" w-full p-4 flex items-center justify-evenly">
-            <Link href="https://www.instagram.com/resch.audio/" target="_blank">
-              <Instagram />
-            </Link>
-            <Link href="https://www.facebook.com/resch.audio" target="_blank">
-              <Facebook />
-            </Link>
-            <Link href="https://www.youtube.com/@reschaudio" target="_blank">
-              <Youtube />
-            </Link>
-          </div>
+          <SocialNetFooter />
         </SheetFooter>
       </SheetContent>
     </Sheet>
