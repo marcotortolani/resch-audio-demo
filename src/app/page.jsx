@@ -1,13 +1,14 @@
+import React from "react";
 
 import HomeSection from "../components/HomeSection";
 
-import SectionHome from "../components/SectionHome"
 
 export default function Home() {
   return (
     <main className=" w-screen min-h-[100svh] overflow-hidden flex flex-col items-center justify-between bg-background">
       <HomeSection />
 
+      
       <section id="#images" className=" w-full h-screen min-h-fit bg-sky-700">
         <h3>Grilla de imagenes</h3>
 
@@ -26,8 +27,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      <SectionHome />
 
       <section id="#about-us" className=" w-full h-screen min-h-fit bg-green-700">
         <h3>Resumen Nosotros</h3>
