@@ -1,5 +1,7 @@
-import Image from "next/image";
+
 import HomeSection from "../components/HomeSection";
+
+import SectionHome from "../components/SectionHome"
 
 export default function Home() {
   return (
@@ -24,6 +26,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <SectionHome />
 
       <section id="#about-us" className=" w-full h-screen min-h-fit bg-green-700">
         <h3>Resumen Nosotros</h3>
