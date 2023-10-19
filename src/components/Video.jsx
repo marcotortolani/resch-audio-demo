@@ -1,9 +1,13 @@
-import React from 'react'
+
+import React from "react";
+
+//import videoSpeaker from "../../videos/pexels_parlante-720.mp4";
 
 export default function Video() {
   return (
     <div>
-        {/* <video src={require("../../public/video/pexels_parlante-720p.mp4")}  controls /> */}
+      
+      {/* <video src={videoSpeaker} autoPlay loop muted width="500" height="500" controls /> */}
     </div>
-  )
+  );
 }

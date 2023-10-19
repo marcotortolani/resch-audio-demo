@@ -18,7 +18,6 @@
     "lucide-react": "^0.287.0",
     "next": "13.5.5",
     "next-themes": "^0.2.1",
-    "next-video": "^0.7.0",
     "react": "^18",
     "react-dom": "^18",
     "tailwind-merge": "^1.14.0",

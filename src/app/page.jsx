@@ -1,6 +1,8 @@
 import React from "react";
 
 import HomeSection from "../components/HomeSection";
+import ImagesGrid from "../components/ImagesGrid"
+
 
 
 export default function Home() {
@@ -8,25 +10,9 @@ export default function Home() {
     <main className=" w-screen min-h-[100svh] overflow-hidden flex flex-col items-center justify-between bg-background">
       <HomeSection />
 
+      <ImagesGrid />
       
-      <section id="#images" className=" w-full h-screen min-h-fit bg-sky-700">
-        <h3>Grilla de imagenes</h3>
-
-        <div className=" w-full h-2/3 grid grid-cols-2 grid-rows-2 bg-gray-300">
-          <div className=" w-full h-full col-span-1 row-span-1 bg-red-200 ">
-            Imagen 01
-          </div>
-          <div className=" w-full h-full col-span-1 row-span-1 bg-blue-200 ">
-            Imagen 02
-          </div>
-          <div className=" w-full h-full col-span-1 row-span-1 bg-green-200 ">
-            Imagen 03
-          </div>
-          <div className=" w-full h-full col-span-1 row-span-1 bg-purple-200 ">
-            Imagen 04
-          </div>
-        </div>
-      </section>
+      
 
       <section id="#about-us" className=" w-full h-screen min-h-fit bg-green-700">
         <h3>Resumen Nosotros</h3>
