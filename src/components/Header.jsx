@@ -38,8 +38,8 @@ export default function Header() {
       }  z-50 fixed w-screen min-h-fit py-2 transition-all flex items-center justify-around bg-background dark:bg-black backdrop-filter backdrop-blur-lg bg-opacity-40 dark:bg-opacity-40 border-b-[0.01rem] border-white dark:border-gray-700`}
     >
       <DarkModeToggle />
-      <div className=" font-light text-lg text-foreground  cursor-none">
-        <Link href="#">Resch Audio</Link>
+      <div className=" font-light hover:font-normal text-lg text-foreground transition-all hover:scale-110 cursor-pointer">
+        <Link href="/">Resch Audio</Link>
       </div>
       <div className=" z-30">
         <BurguerMenu />

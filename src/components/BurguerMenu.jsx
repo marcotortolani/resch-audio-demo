@@ -36,6 +36,13 @@ export default function SheetDemo() {
 
         <div className="grid gap-2 py-10">
           <Link
+            href="/"
+            target="_self"
+            className=" p-2 pl-0 hover:pl-2 hover:bg-gradient-to-r from-foreground to-transparent hover:text-background rounded-lg"
+          >
+            Home
+          </Link>
+          <Link
             href="/works"
             target="_self"
             className=" p-2 pl-0 hover:pl-2 hover:bg-gradient-to-r from-foreground to-transparent hover:text-background rounded-lg"

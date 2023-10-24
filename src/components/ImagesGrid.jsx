@@ -37,19 +37,38 @@ const images = [
   },
 ];
 
+import { ArrowLeftCircle, ArrowRightCircle, XSquare } from "lucide-react";
+
 export default function ImagesGrid() {
   const [imageSelected, setImageSelected] = useState(0);
 
+  console.log(imageSelected);
+
+  function handleNextImage() {
+    if (imageSelected === images.length) {
+      setImageSelected(1);
+    } else {
+      setImageSelected((prev) => prev + 1);
+    }
+  }
+  function handlePreviousImage() {
+    if (imageSelected === 1) {
+      setImageSelected(images.length);
+    } else {
+      setImageSelected((prev) => prev - 1);
+    }
+  }
+
   return (
     <section
-      id="#images"
-      className=" relative w-full max-w-5xl h-full min-h-fit"
+      id="images"
+      className=" relative w-screen h-fit min-h-[600px] py-10 flex items-center justify-center "
     >
-      <ul className=" w-full h-fit grid grid-cols-3 grid-rows-2 gap-6  ">
+      <ul className=" w-full max-w-5xl h-fit p-2 md:p-4 grid grid-cols-2 grid-rows-3 md:grid-cols-3 md:grid-rows-2 gap-2 md:gap-6  ">
         {images.map((image) => (
           <li
             key={image.id}
-            className=" w-full h-fit col-span-1 row-span-1 flex items-center justify-center rounded-2xl "
+            className=" w-full h-fit col-span-1 row-span-1 flex items-center justify-center rounded-2xl cursor-pointer "
           >
             <div className="w-full h-auto rounded-[inherit] hover:scale-110 hover:border-foreground border-background border-2 transition-all">
               <Image
@@ -66,21 +85,33 @@ export default function ImagesGrid() {
         ))}
       </ul>
 
-      {imageSelected && (
-        <div className=" absolute top-0 w-full h-full p-5 flex items-center justify-center bg-black bg-opacity-20 backdrop-blur-md drop-blur-md border-foreground border-2 rounded-xl ">
-          <div className=" absolute top-4 right-4">
+      {imageSelected !== 0 && (
+        <div className=" absolute top-10  w-screen md:w-[90vw] max-w-7xl h-[90%]  p-4 flex items-center justify-center bg-gray-400 bg-opacity-20 backdrop-blur-md drop-blur-md border-foreground border-2 rounded-xl ">
+          <div className="z-30 absolute bottom-14 sm:bottom-0 w-full h-full flex items-end sm:items-center justify-between ">
             <button
-              className=" px-4 py-1 bg-foreground font-bold text-background hover:bg-gray-400 active:scale-90 rounded-full"
-              onClick={() => setImageSelected(0)}
+              className=" absolute left-5 sm:left-0 md:left-2 m-2 p-2 transition-all hover:bg-accent rounded-full cursor-pointer"
+              onClick={handlePreviousImage}
             >
-              X
+              <ArrowLeftCircle size={40} />
+            </button>
+            <button
+              className=" absolute right-5 sm:right-0 md:right-2 m-2 p-2 transition-all hover:bg-accent rounded-full cursor-pointer"
+              onClick={handleNextImage}
+            >
+              <ArrowRightCircle size={40} />
             </button>
           </div>
-          <div className=" relative w-5/6 h-5/6 bg-blue-300 rounded-[inherit]">
+          <div className=" z-50 absolute top-4 right-4">
+            <button
+              className=" p-2 font-bold text-foreground bg-background hover:bg-accent active:scale-90 rounded-sm cursor-pointer pointer-events-auto "
+              onClick={() => setImageSelected(0)}
+            >
+              <XSquare size={30} />
+            </button>
+          </div>
+          <div className=" z-20 relative w-full sm:w-5/6 h-3/6 md:h-5/6 rounded-[inherit]">
             <Image
               className=" w-full h-auto object-cover rounded-[inherit]"
-              // width={250}
-              // height={200}
               src={images[imageSelected - 1].src}
               alt={`Image ${images[imageSelected - 1].title}`}
               fill={true}

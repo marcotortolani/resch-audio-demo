@@ -1,9 +1,8 @@
 import React from "react";
 
 import HomeSection from "../components/HomeSection";
-import ImagesGrid from "../components/ImagesGrid"
-
-
+import ImagesGrid from "../components/ImagesGrid";
+import AboutSection from "../components/AboutSection";
 
 export default function Home() {
   return (
@@ -11,22 +10,8 @@ export default function Home() {
       <HomeSection />
 
       <ImagesGrid />
-      
-      
 
-      <section id="#about-us" className=" w-full h-screen min-h-fit bg-green-700">
-        <h3>Resumen Nosotros</h3>
-
-        <div className=" w-full h-full">
-          <div className=" w-1/2 h-2/3">Foto hermanos Resch trabajando</div>
-          <p>
-            Duis nisi enim sint proident dolore magna eiusmod qui duis pariatur
-            in exercitation. Velit velit in deserunt incididunt et ullamco minim
-            sunt elit occaecat commodo eu duis. Non esse non consectetur et sint
-            elit cillum.
-          </p>
-        </div>
-      </section>
+      <AboutSection />
 
       <footer className="  w-full h-1/4 bg-background"></footer>
     </main>
